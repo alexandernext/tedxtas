@@ -22,36 +22,31 @@
 	</head>
 
 	<body class="text-center">
-		<div class="modal fade speaker_bio_modal in" id="theme" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-center">
-				<div class="modal-content">
-					<div class="modal-body">
-						<h2>TEDx 2017 is here!</h2>
-						<h3>The TEDx theme for 2017, Ctrl Alt Delete, asks participants to rethink their mindset and beliefs.</h3><br/>
-						<a class="btn btn-primary btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLScYuoyagJMjkl6B4tol4LdXHAi1FuXJrpchD-5isqVdKFw1Lg/viewform">Get tickets →</a>
-						<img class='img-responsive promo-img' src='promo_lg.jpg'></img>
-					</div>
-				</div>
-			</div>
-		</div>
 		<!-- Main jumbotron for a primary marketing message or call to action -->
 		<div class="jumbotron" id='marketing'>
 		  <div class="container">
-				<!--
-				<div class="row">
-					<div class="col-xs-6 col-sm-offset-4 col-sm-4">
-						<img class="img-responsive" src="promo.png"></img>
+			<div class="row">
+				<div class="col-xs-6 col-xs-offset-3">
+					<div id="theme">
+						<img class="img-responsive" src="promo_lg.png">
+						<h2 class="pink small-head">rethinking... <span id="percentage-loaded">0%</span></h2>
+						<a onclick="javascript:change()" class="pink" id="skip">skip</a>
 					</div>
 				</div>
-			-->
+			</div>
+			<div id="marketing-secondary">
 				<div class="row">
 					<div class="col-xs-12">
 						<div id="centered-marketing">
 							<h2 id="marketing-text-container">Rethink <span id="marketing-text"></span></h2>
 							<a class="btn btn-primary btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLScYuoyagJMjkl6B4tol4LdXHAi1FuXJrpchD-5isqVdKFw1Lg/viewform">Get tickets now →</a>
 						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
 						<div id="marketing-heading">
-							<h2>TEDxTAS 2017</h2>
+							<h2 class="small-head">TEDxTAS 2017</h2>
 							<h4 class="red">January 14, 2017</h4>
 						</div>
 						<div class="navigation">
@@ -59,6 +54,7 @@
 						</div>
 					</div>
 				</div>
+			</div>
 		  </div>
 		</div>
 
@@ -372,15 +368,31 @@
 		<script src="typed.js"></script>
 		<script>
 			$(window).load(function(){
-        $('#theme').modal('show');
-				$('#theme').on('hidden.bs.modal', function () {
+				window.startTime = new Date().getTime();
+				window.intervalTimer = setInterval(load, Math.random() * 400 + 100);
+    	});
+
+			function load(){
+				let constant = 5000;
+				let percentage = (new Date().getTime() - window.startTime) / 5000 * 100;
+				if(percentage > 100){
+					change();
+				}
+				else {
+					$('#percentage-loaded').html(Math.round(percentage) + '%');
+				}
+			}
+			function change(){
+				clearInterval(window.intervalTimer);
+					$('#theme').hide();
+					$('#marketing-secondary').fadeIn();
+					hasChanged = true;
 					$("#marketing-text").typed({
 						strings: ["education.", "feminism.", "depression.", "success.", "happiness.", "architecture.", "higher education.", "anthropods."],
 						typeSpeed: 80,
 						loop: true
 					});
-				});
-    	});
+			}
 		</script>
 	</body>
 </html>
