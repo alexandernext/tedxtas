@@ -29,7 +29,7 @@
 				<div class="col-xs-6 col-xs-offset-3">
 					<div>
 						<img class="img-responsive" src="promo_lg.png">
-						<h2 class="pink small-head">rethinking... <span id="percentage-loaded">0%</span></h2>
+						<h2 class="red small-head" id="rethinking-pct">rethinking... <span id="percentage-loaded">0%</span></h2>
 						<a onclick="javascript:change()" class="pink" id="skip">skip</a>
 					</div>
 				</div>
@@ -425,6 +425,7 @@
 				}
 				else {
 					$('#percentage-loaded').html(Math.round(percentage) + '%');
+					$('#rethinking-pct').attr('style', 'opacity: ' + (percentage / 100 / 2 + 0.5));
 					window.intervalTimer = setTimeout(load, Math.random() * 400 + 100)
 				}
 			}
