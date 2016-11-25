@@ -61,7 +61,7 @@
 				<div class="container-fluid white-bg" id="navigation">
 					<div class="row">
 						<div class="col-xs-12">
-							<h4 class="red"><a href="#speakers" class="page-scroll" id="speakers-link"><span>Speakers</span></a> | <a href="#tedxteam" class="page-scroll" id="team-link"><span>The Team</span></a> | <a href="#whatistedx" class="page-scroll" id="what-is-link"><span>TEDx</span></a></h4>
+							<h4 class="red"><a href="#speakers" class="page-scroll" id="speakers-link"><span>Speakers</span></a> | <a href="#tedxteam" class="page-scroll" id="team-link"><span>The Team</span></a> | <a href="#whatistedx" class="page-scroll" id="whatis-link"><span>TEDx</span></a></h4>
 						</div>
 					</div>
 				</div>
@@ -229,7 +229,6 @@
 						<div class="col-lg-10 col-lg-offset-1">
 							<h2>What is TEDx?</h2>
 							<p>In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. Our event is called TEDxTaipeiAmericanSchool, where x = independently organized TED event. At our TEDxTaipeiAmericanSchool event, TEDTalks video and live speakers will combine to spark deep discussion and connection in a small group. The TED Conference provides general guidance for the TEDx program, but individual TEDx events, including ours, are self-organized.</p>
-							<a class="btn btn-primary btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLScYuoyagJMjkl6B4tol4LdXHAi1FuXJrpchD-5isqVdKFw1Lg/viewform">Blow my mind →</a>
 						</div>
 					</div>
 				</div>
@@ -364,11 +363,14 @@
 			</div>
 
 
-
-			<div class="container">
-				<footer>
-				</footer>
-			</div>
+				<div class="container-fluid" id="footer">
+						<div class="row">
+							<div class="col-md-12">
+								<h3>Ready for an adventure?</h3>
+								<a class="btn btn-default btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLScYuoyagJMjkl6B4tol4LdXHAi1FuXJrpchD-5isqVdKFw1Lg/viewform">Register →</a>
+							</div>
+						</div>
+				</div>
 		</div>
 
 
@@ -385,7 +387,7 @@
     	});
 
 			$(window).bind('scroll', function() {
-				let scrollIndex = $(window).scrollTop();
+				let scrollIndex = $(window).scrollTop() + $(window).height() / 2;
          if (scrollIndex > $('#date').offset().top) {
              $('#navigation').addClass('fixed');
 						 if(scrollIndex >= $('#whatistedx').offset().top){

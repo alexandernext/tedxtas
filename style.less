@@ -54,6 +54,15 @@ body {
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary:active:focus {
 	background: lighten(@TED_RED, 15%);
 }
+.btn-default {
+	background: white;
+	color: @TED_RED;
+	border: none;
+}
+.btn-default:hover, .btn-default:active, .btn-default:focus, .btn-default:active:focus {
+	background: lighten(@TED_RED, 70%);
+	color: @TED_RED;
+}
 .small-head {
 	font-size: 30px;
 }
@@ -87,6 +96,11 @@ a:hover, a:active, a:focus, a:active:focus, a.active {
 	color: white;
 	background: @TED_RED;
 	text-decoration: none;
+}
+#footer {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background: @TED_RED;
 }
 
 #speakers {
