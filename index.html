@@ -384,6 +384,9 @@
 			$(window).load(function(){
 				window.startTime = new Date().getTime();
 				window.intervalTimer = setTimeout(load, Math.random() * 400 + 100);
+				if(window.location.href.substring(0, 4) === "http"){
+					$('#skip').hide(); // hides skip button if being loaded over http/https
+				}
     	});
 
 			$(window).bind('scroll', function() {
