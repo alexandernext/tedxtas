@@ -388,27 +388,31 @@
 
 			$(window).bind('scroll', function() {
 				let scrollIndex = $(window).scrollTop() + $(window).height() / 2;
-         if (scrollIndex > $('#date').offset().top) {
+         if ($(window).scrollTop() > $('#date').offset().top) { // for animation to show longer until is entirely out of sight
              $('#navigation').addClass('fixed');
 						 if(scrollIndex >= $('#whatistedx').offset().top){
+							 $('#marketing-text').addClass('stopped');
  								$('#speakers-link').remove('active');
  								$('#team-link').removeClass('active');
  								$('#whatis-link').addClass('active');
 							}
 							else if (scrollIndex >= $('#tedxteam').offset().top) {
+								$('#marketing-text').addClass('stopped');
 								$('#speakers-link').removeClass('active');
 								$('#team-link').addClass('active');
 								$('#whatis-link').removeClass('active');
 							}
 							else {
+								$('#marketing-text').addClass('stopped');
 								$('#speakers-link').addClass('active');
 								$('#team-link').removeClass('active');
 								$('#whatis-link').removeClass('active');
 							}
 						}
 	         else {
-	             $('#navigation').removeClass('fixed');
-							 $('#navigation a').removeClass('active');
+						 $('#marketing-text').removeClass('stopped');
+						 $('#navigation').removeClass('fixed');
+						 $('#navigation a').removeClass('active');
 	         }
     });
 
