@@ -141,12 +141,13 @@ a:hover, a:active, a:focus, a:active:focus, a.active {
 	transition:0.3s ease;
 	-webkit-backface-visibility:hidden;
 }
-.team_portrait:hover {
-	-webkit-transform:scale(1.1);
-	>.portrait {
-		opacity:0.95;
+@media (min-width: 1080px) {
+	.team_portrait:hover {
+		-webkit-transform:scale(1.1);
+		>.portrait {
+			opacity:0.95;
+		}
 	}
-
 }
 #speakers {
 	background: lighten(@TED_RED, 40%);

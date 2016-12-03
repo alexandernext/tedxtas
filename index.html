@@ -385,7 +385,9 @@
 				if(window.location.href.substring(0, 4) !== "http"){
 					$('#skip').show(); // shows skip button if not being loaded over http/https
 				}
-				$('[data-toggle="tooltip"]').tooltip({html: true})
+				if(window.matchMedia("(min-width: 767px)").matches){
+					$('[data-toggle="tooltip"]').tooltip({html: true});
+				}
     	});
 
 			$(window).bind('scroll', function() {
