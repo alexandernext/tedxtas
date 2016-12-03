@@ -380,7 +380,8 @@
 		<script>
 			$(window).load(function(){
 				window.startTime = new Date().getTime();
-				window.intervalTimer = setTimeout(load, Math.random() * 400 + 100);
+				window.timeConstant = Math.random() * 2000 + 1000;
+				window.intervalTimer = setTimeout(load, Math.random() * 200 + 100);
 				if(window.location.href.substring(0, 4) !== "http"){
 					$('#skip').show(); // shows skip button if not being loaded over http/https
 				}
@@ -418,8 +419,7 @@
     });
 
 			function load(){
-				let constant = Math.random() * 4000 + 1000;
-				let percentage = (new Date().getTime() - window.startTime) / 5000 * 100;
+				let percentage = (new Date().getTime() - window.startTime) / window.timeConstant * 100;
 				if(percentage > 100){
 					change();
 				}
