@@ -52,7 +52,7 @@ body {
 	border: none;
 }
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary:active:focus {
-	background: lighten(@TED_RED, 15%);
+	background: lighten(@TED_RED, 15%) !important;
 }
 .btn-default {
 	background: white;
@@ -204,7 +204,7 @@ a.anchor {
 }
 
 
-.speaker_bio_modal {
+.content_modal, .speaker_bio_modal {
 	.modal-content {
 		border-radius:0px;
 		background: lighten(@TED_RED, 40%);
@@ -222,7 +222,6 @@ a.anchor {
 			text-transform: uppercase;
 		}
 		h3 {
-			display:inline-block;
 			font-weight:normal;
 			font-size:20px;
 			font-family: Montserrat;
@@ -235,6 +234,10 @@ a.anchor {
 			font-family: Montserrat;
 			color:@TED_RED;
 		}
+	}
+	ul {
+		color: @TED_RED;
+		margin-top: -5px;
 	}
 
 }
