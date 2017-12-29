@@ -34,8 +34,8 @@
 						<div class="row">
 							<div class="col-xs-12">
 								<div id="centered-marketing">
-									<h2 id="marketing-text-container">TEDxTAS 2018<br/><input placeholder="Your title here" style="text-align: center; border: none;"><span id="marketing-text"></span></input></h2>
-									<a class="btn btn-primary btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLScYuoyagJMjkl6B4tol4LdXHAi1FuXJrpchD-5isqVdKFw1Lg/viewform">Get tickets now →</a>
+									<h2 id="marketing-text-container">Let's talk about<br/><input placeholder="your title here" id="marketing-text" style="text-align: center; border: none;"></input></h2>
+									<a class="btn btn-primary btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSdu00fG97xhMoO04nnp0RyG8fv_n41TkTNx9_TqN7FtMBHZDw/viewform">Get tickets now →</a>
 								</div>
 							</div>
 						</div>
@@ -382,7 +382,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<h3>Ready for an adventure?</h3>
-								<a class="btn btn-default btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLScYuoyagJMjkl6B4tol4LdXHAi1FuXJrpchD-5isqVdKFw1Lg/viewform">Register →</a>
+								<a class="btn btn-default btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSdu00fG97xhMoO04nnp0RyG8fv_n41TkTNx9_TqN7FtMBHZDw/viewform">Register →</a>
 							</div>
 						</div>
 				</div>
@@ -435,11 +435,11 @@
 
 
 			function change(){
-				// $("#marketing-text").typed({
-				// 	strings: ["education.", "feminism.", "depression.", "perspective.", "success.", "happiness.", "architecture.", "higher education.", "anthropods."],
-				// 	typeSpeed: 80,
-				// 	loop: true
-				// });
+				$("#marketing-text").typed({
+					strings: ["education", "feminism", "depression", "perspective", "success", "happiness", "architecture", "higher education", "anthropods", "your title here"],
+					typeSpeed: 20,
+					attr: 'placeholder'
+				});
 			}
 		</script>
 	</body>
