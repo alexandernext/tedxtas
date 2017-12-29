@@ -26,19 +26,8 @@
 
 	<body class="text-center">
 
-		<div class="container white-bg" id="theme">
-			<div class="row">
-				<div class="col-xs-6 col-xs-offset-3">
-					<div>
-						<img class="img-responsive" src="promo_lg.png">
-						<h2 class="red small-head" id="rethinking-pct">rethinking... <span id="percentage-loaded">0%</span></h2>
-						<a onclick="javascript:change()" class="pink" id="skip">skip</a>
-					</div>
-				</div>
-			</div>
-		</div>
 		<!-- Main jumbotron for a primary marketing message or call to action -->
-		<div id="everything-else">
+		<div>
 			<div class="jumbotron white-bg" id="marketing">
 				<div class="container">
 					<div>
@@ -53,8 +42,8 @@
 						<div class="row">
 							<div class="col-xs-12">
 								<div id="marketing-heading">
-									<h2 class="small-head">TEDxTAS 2017</h2>
-									<h4 class="red clear-bottom-margin" id="date">January 14, 2017</h4>
+									<h2 class="small-head">TEDxTAS 2018</h2>
+									<h4 class="red clear-bottom-margin" id="date">January 20, 2018</h4>
 								</div>
 							</div>
 						</div>
@@ -408,15 +397,10 @@
 		<script src="typed.js"></script>
 		<script>
 			$(window).load(function(){
-				window.startTime = new Date().getTime();
-				window.timeConstant = Math.random() * 2000 + 1000;
-				window.intervalTimer = setTimeout(load, Math.random() * 200 + 100);
-				if(window.location.href.substring(0, 4) !== "http"){
-					$('#skip').show(); // shows skip button if not being loaded over http/https
-				}
 				if(window.matchMedia("(min-width: 767px)").matches){
 					$('[data-toggle="tooltip"]').tooltip({html: true});
 				}
+				change();
     	});
 
 			$(window).bind('scroll', function() {
@@ -449,22 +433,8 @@
 	         }
     });
 
-			function load(){
-				let percentage = (new Date().getTime() - window.startTime) / window.timeConstant * 100;
-				if(percentage > 100){
-					change();
-				}
-				else {
-					$('#percentage-loaded').html(Math.round(percentage) + '%');
-					$('#rethinking-pct').attr('style', 'opacity: ' + (percentage / 100 / 2 + 0.5));
-					window.intervalTimer = setTimeout(load, Math.random() * 400 + 100)
-				}
-			}
+
 			function change(){
-				clearTimeout(window.intervalTimer);
-				$('#theme').hide();
-				$('#everything-else').fadeIn();
-				hasChanged = true;
 				$("#marketing-text").typed({
 					strings: ["education.", "feminism.", "depression.", "perspective.", "success.", "happiness.", "architecture.", "higher education.", "anthropods."],
 					typeSpeed: 80,
