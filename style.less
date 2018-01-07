@@ -96,10 +96,8 @@ body {
 		::placeholder {
 			color: #d0d0d0;
 		}
+		max-width: 100%;
 	}
-}
-#marketing-text {
-	// text-align: center;
 }
 #marketing-text.stopped {
 	display: none;
@@ -118,11 +116,18 @@ body {
 	text-align: left;
 	display: inline-block;
 	background: #fff;
+	overflow: hidden;
 }
 @media (max-width: 1050px) {
 	#ticket {
 		text-align: center;
 		margin: 30px;
+		#marketing-text-container {
+			font-size: @HEADER_SIZE * 0.5;
+		}
+		#marketing-text {
+			min-width: 100px;
+		}
 	}
 	#marketing-head {
 		margin: 0;
