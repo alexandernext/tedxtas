@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="styles.css">
 		<link id="favicon" rel="shortcut icon" type="image/x-icon" href="branding/favicon.ico" />
 
-		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Space+Mono:700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Space+Mono:700|Patrick+Hand:400' rel='stylesheet' type='text/css'>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<!--[if lt IE 9]><script src="http://xy-kao.com/theme/new/html5shiv.js"></script><![endif]-->
 		<script>
@@ -26,41 +26,39 @@
 
 	<body class="text-center">
 
-		<div class="container white-bg" id="theme">
-			<div class="row">
-				<div class="col-xs-6 col-xs-offset-3">
-					<div>
-						<img class="img-responsive" src="promo_lg.png">
-						<h2 class="red small-head" id="rethinking-pct">rethinking... <span id="percentage-loaded">0%</span></h2>
-						<a onclick="javascript:change()" class="pink" id="skip">skip</a>
-					</div>
-				</div>
-			</div>
-		</div>
 		<!-- Main jumbotron for a primary marketing message or call to action -->
-		<div id="everything-else">
-			<div class="jumbotron white-bg" id="marketing">
+		<div>
+			<div class="jumbotron img-bg" id="marketing">
 				<div class="container">
+
 					<div>
-						<div class="row">
-							<div class="col-xs-12">
-								<div id="centered-marketing">
-									<h2 id="marketing-text-container">Rethink <span id="marketing-text"></span></h2>
-									<a class="btn btn-primary btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLScYuoyagJMjkl6B4tol4LdXHAi1FuXJrpchD-5isqVdKFw1Lg/viewform">Get tickets now →</a>
+						<div id="marketing-head">
+							<div class="row" id="ticket">
+								<div class="col-xs-6 col-xs-offset-3 col-sm-2 col-sm-offset-0" style="text-align: center;">
+									<img src="yth.png" style="width: 100%;"></img>
+								</div>
+								<div class="col-xs-12 col-sm-10">
+									<h2 id="marketing-text-container">Hey there, I'm <input placeholder="name" id="marketing-name" class="marketing-text" type="text" width="auto" size="4"></input>!<br>Let's talk about <input placeholder="water" class="marketing-text" id="marketing-text" type="text" width="auto" size="5"></input>.</h2>
+									<a class="btn btn-secondary btn-lg" onclick="location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdu00fG97xhMoO04nnp0RyG8fv_n41TkTNx9_TqN7FtMBHZDw/viewform?usp=pp_url&entry.1869428=' + encodeURIComponent($('#marketing-name').val()) + '&entry.954482260=' + encodeURIComponent($('#marketing-text').val())">Create my ticket now →</a>
 								</div>
 							</div>
 						</div>
+
 						<div class="row">
 							<div class="col-xs-12">
 								<div id="marketing-heading">
-									<h2 class="small-head">TEDxTAS 2017</h2>
-									<h4 class="red clear-bottom-margin" id="date">January 14, 2017</h4>
+									<div class="logo">
+										<div class="col-sm-4 col-sm-offset-4 col-xs-12">
+											<img src="logo.png" class="img-responsive"></img>
+											<h4 class="clear-bottom-margin" id="date">Saturday, January 20th, 2018</h4>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 			  </div>
-				<div class="container-fluid white-bg" id="navigation">
+				<div class="container-fluid" id="navigation">
 					<div class="row">
 						<div class="col-xs-12">
 							<h4 class="red"><a href="#speakers" class="page-scroll" id="speakers-link"><span>Speakers</span></a> | <a href="#tedxteam" class="page-scroll" id="team-link"><span>The Team</span></a> | <a href="#whatistedx" class="page-scroll" id="whatis-link"><span>TEDx</span></a></h4>
@@ -78,70 +76,58 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-3 col-md-offset-1x5 col-md-3 col-sm-6 col-xs-12 bio" data-toggle="modal" data-target="#teng">
+						<div class="col-lg-3 col-md-offset-1x5 col-md-3 col-sm-6 col-xs-12 bio" data-toggle="modal" data-target="#hsieh">
 							<div class='button_cursor'>
-								<img class='portrait img-responsive' src="portraits/speakers/teng.JPG">
-								<h4 class='name'>Vivian Teng</h4>
+								<img class='portrait img-responsive' src="portraits/speakers/hsieh.jpg">
+								<h4 class='name'>Tingjen Hsieh</h4>
 							</div>
 						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 bio" data-toggle="modal" data-target="#feuerhahn">
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 bio" data-toggle="modal" data-target="#chen">
 							<div class='button_cursor'>
-								<img class='portrait img-responsive' src="portraits/speakers/feuerhahn.JPG">
-								<h4 class='name'>Oliver Feuerhahn</h4>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 bio" data-toggle="modal" data-target="#uhlman">
-							<div class='button_cursor'>
-								<img class='portrait img-responsive' src="portraits/speakers/uhlman.JPG">
-								<h4 class='name'>Annabel Uhlman</h4>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-offset-1x5 col-md-3 col-sm-6 col-xs-12 bio" data-toggle="modal" data-target="#tsai">
-							<div class='button_cursor'>
-								<img class='portrait img-responsive' src="portraits/speakers/tsai.JPG">
-								<h4 class='name'>Fiona Tsai</h4>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 bio" data-toggle="modal" data-target="#yang">
-							<div class='button_cursor'>
-								<img class='portrait img-responsive' src="portraits/speakers/yang.JPG">
-								<h4 class='name'>Janice Yang</h4>
+								<img class='portrait img-responsive' src="portraits/speakers/chen.jpg">
+								<h4 class='name'>Sisy Chen</h4>
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 bio" data-toggle="modal" data-target="#hsu">
 							<div class='button_cursor'>
-								<img class='portrait img-responsive' src="portraits/speakers/hsu.JPG">
-								<h4 class='name'>Rose Hsu</h4>
+								<img class='portrait img-responsive' src="portraits/speakers/hsu.jpg">
+								<h4 class='name'>Rachel Hsu</h4>
 							</div>
 						</div>
-						<div class="col-lg-3 col-md-offset-1x5 col-md-3 col-sm-6 col-xs-12 bio" data-toggle="modal" data-target="#wang">
+						<div class="col-lg-3 col-md-offset-1x5 col-md-3 col-sm-6 col-xs-12 bio" data-toggle="modal" data-target="#chang">
 							<div class='button_cursor'>
-								<img class='portrait img-responsive' src="portraits/speakers/wang.JPG">
-								<h4 class='name'>Jason Wang</h4>
+								<img class='portrait img-responsive' src="portraits/speakers/chang.jpg">
+								<h4 class='name'>Melissa Chang</h4>
 							</div>
 						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 bio" data-toggle="modal" data-target="#boyle">
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 bio" data-toggle="modal" data-target="#shah">
 							<div class='button_cursor'>
-								<img class='portrait img-responsive' src="portraits/speakers/boyle.JPG">
-								<h4 class='name'>Seamus Boyle</h4>
+								<img class='portrait img-responsive' src="portraits/speakers/shah.jpg">
+								<h4 class='name'>Dhirpal Shah</h4>
 							</div>
 						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 bio" data-toggle="modal" data-target="#ives">
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 bio" data-toggle="modal" data-target="#xu">
 							<div class='button_cursor'>
-								<img class='portrait img-responsive' src="portraits/speakers/ives.JPG">
-								<h4 class='name'>Anthony Ives</h4>
+								<img class='portrait img-responsive' src="portraits/speakers/xu.jpg">
+								<h4 class='name'>Andy Xu</h4>
 							</div>
 						</div>
-						<div class="col-lg-3 col-md-3 col-md-offset-3 col-sm-6 col-xs-12 bio" data-toggle="modal" data-target="#rhoades">
+						<div class="col-lg-3 col-md-offset-1x5 col-md-3 col-sm-6 col-xs-12 bio" data-toggle="modal" data-target="#bargiel">
 							<div class='button_cursor'>
-								<img class='portrait img-responsive' src="portraits/speakers/rhoades.JPG">
-								<h4 class='name'>Dustin Rhoades</h4>
+								<img class='portrait img-responsive' src="portraits/speakers/bargiel.jpg">
+								<h4 class='name'>Carly Bargiel</h4>
 							</div>
 						</div>
-						<div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 bio" data-toggle="modal" data-target="#ross">
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 bio" data-toggle="modal" data-target="#walker">
 							<div class='button_cursor'>
-								<img class='portrait img-responsive' src="portraits/speakers/ross.JPG">
-								<h4 class='name'>Kenn Ross</h4>
+								<img class='portrait img-responsive' src="portraits/speakers/walker.jpg">
+								<h4 class='name'>Luke Walker</h4>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 bio" data-toggle="modal" data-target="#chiang">
+							<div class='button_cursor'>
+								<img class='portrait img-responsive' src="portraits/speakers/chiang.jpg">
+								<h4 class='name'>Vivian Chiang</h4>
 							</div>
 						</div>
 					</div>
@@ -165,55 +151,55 @@
 					</div>
 					<div class="row">
 						<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
-							<img class='portrait img-responsive team_portrait' src="portraits/members/felicity.JPG" data-toggle="tooltip" data-placement="left" title="<h4>Felicity Lin</h4><h4><b>Head Curator</b></h4>">
+							<img class='portrait img-responsive team_portrait' src="portraits/members/nicolec.jpg" data-toggle="tooltip" data-placement="left" title="<h4>Nicole Chang</h4><h4><b>Head Curator</b></h4>">
 						</div>
 						<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
-							<img class='portrait img-responsive team_portrait' src="portraits/members/jerry.JPG" data-toggle="tooltip" data-placement="left" title="<h4>Jerry Hsu</h4><h4><b>Head Curator</b></h4>">
+							<img class='portrait img-responsive team_portrait' src="portraits/members/marinac.jpg" data-toggle="tooltip" data-placement="left" title="<h4>Marina Chang</h4><h4><b>Head Curator</b></h4>">
 						</div>
 						<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
-							<img class='portrait img-responsive team_portrait' src="portraits/members/caroline.JPG" data-toggle="tooltip" data-placement="left" title="<h4>Caroline Chou</h4><h4><b>Event Host</b></h4>">
+							<img class='portrait img-responsive team_portrait' src="portraits/members/catheriney.jpg" data-toggle="tooltip" data-placement="left" title="<h4>Catherine Yeh</h4><h4><b>Event Host</b></h4>">
 						</div>
 						<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
-							<img class='portrait img-responsive team_portrait' src="portraits/members/april.JPG" data-toggle="tooltip" data-placement="right" title="<h4>April Chu</h4><h4><b>Design</b></h4>">
+							<img class='portrait img-responsive team_portrait' src="portraits/members/keannec.jpg" data-toggle="tooltip" data-placement="right" title="<h4>Keanne Chang</h4><h4><b>Speakers</b></h4>">
 						</div>
 						<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
-							<img class='portrait img-responsive team_portrait' src="portraits/members/katie.JPG" data-toggle="tooltip" data-placement="right" title="<h4>Katie Fong</h4><h4><b>Speakers</b></h4>">
+							<img class='portrait img-responsive team_portrait' src="portraits/members/keviny.jpg" data-toggle="tooltip" data-placement="right" title="<h4>Kevin Yu</h4><h4><b>Production</b></h4>">
 						</div>
 						<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
-							<img class='portrait img-responsive team_portrait' src="portraits/members/laurent.JPG" data-toggle="tooltip" data-placement="right" title="<h4>Laurent Hsia</h4><h4><b>Production</b></h4>">
+							<img class='portrait img-responsive team_portrait' src="portraits/members/chrisc.jpg" data-toggle="tooltip" data-placement="right" title="<h4>Chris Chang</h4><h4><b>Speakers</b></h4>">
 						</div>
 						<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
-							<img class='portrait img-responsive team_portrait' src="portraits/members/alex.JPG" data-toggle="tooltip" data-placement="left" title="<h4>Alex Huang</h4><h4><b>Technology</b></h4>">
+							<img class='portrait img-responsive team_portrait' src="portraits/members/alexh.jpg" data-toggle="tooltip" data-placement="left" title="<h4>Alex Huang</h4><h4><b>Technology</b></h4>">
 						</div>
 						<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
-							<img class='portrait img-responsive team_portrait' src="portraits/members/angela.JPG" data-toggle="tooltip" data-placement="left" title="<h4>Angela Chiang</h4><h4><b>Event Host</b></h4>">
+							<img class='portrait img-responsive team_portrait' src="portraits/members/florencel.jpg" data-toggle="tooltip" data-placement="left" title="<h4>Florence Liou</h4><h4><b>Production</b></h4>">
 						</div>
 						<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
-							<img class='portrait img-responsive team_portrait' src="portraits/members/rachel.JPG" data-toggle="tooltip" data-placement="left" title="<h4>Rachel Lee</h4><h4><b>Design</b></h4>">
+							<img class='portrait img-responsive team_portrait' src="portraits/members/irish.jpg" data-toggle="tooltip" data-placement="left" title="<h4>Iris Huang</h4><h4><b>Event Host</b></h4>">
 						</div>
 						<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
-							<img class='portrait img-responsive team_portrait' src="portraits/members/cherice.JPG" data-toggle="tooltip" data-placement="right" title="<h4>Cherice Tsai</h4><h4><b>Speakers</b></h4>">
+							<img class='portrait img-responsive team_portrait' src="portraits/members/charlottel.jpg" data-toggle="tooltip" data-placement="right" title="<h4>Charlotte Lee</h4><h4><b>Speakers</b></h4>">
 						</div>
 						<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
-							<img class='portrait img-responsive team_portrait' src="portraits/members/tiffany.JPG" data-toggle="tooltip" data-placement="right" title="<h4>Tiffany Chen</h4><h4><b>Speakers</b></h4>">
+							<img class='portrait img-responsive team_portrait' src="portraits/members/alexl.jpg" data-toggle="tooltip" data-placement="right" title="<h4>Alex Lin</h4><h4><b>Technology</b></h4>">
 						</div>
 						<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
-							<img class='portrait img-responsive team_portrait' src="portraits/members/catherine.JPG" data-toggle="tooltip" data-placement="right" title="<h4>Catherine Yeh</h4><h4><b>Production</b></h4>">
+							<img class='portrait img-responsive team_portrait' src="portraits/members/briank.jpg" data-toggle="tooltip" data-placement="right" title="<h4>Brian Kuo</h4><h4><b>Technology</b></h4>">
 						</div>
 						<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 col-md-offset-1">
-							<img class='portrait img-responsive team_portrait' src="portraits/members/emily.JPG" data-toggle="tooltip" data-placement="left" title="<h4>Emily Chen</h4><h4><b>Marketing</b></h4>">
+							<img class='portrait img-responsive team_portrait' src="portraits/members/lichunp.jpg" data-toggle="tooltip" data-placement="left" title="<h4>Li-chun Pan</h4><h4><b>Design</b></h4>">
 						</div>
 						<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
-							<img class='portrait img-responsive team_portrait' src="portraits/members/marina.JPG" data-toggle="tooltip" data-placement="bottom" title="<h4>Marina Chang</h4><h4><b>Speakers</b></h4>">
+							<img class='portrait img-responsive team_portrait' src="portraits/members/oliverf.jpg" data-toggle="tooltip" data-placement="bottom" title="<h4>Oliver Feuerhahn</h4><h4><b>Oliver</b></h4>">
 						</div>
 						<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
-							<img class='portrait img-responsive team_portrait' src="portraits/members/ashley.JPG" data-toggle="tooltip" data-placement="bottom" title="<h4>Ashley Lin</h4><h4><b>Treasury</b></h4>">
+							<img class='portrait img-responsive team_portrait' src="portraits/members/roseh.jpg" data-toggle="tooltip" data-placement="bottom" title="<h4>Ashley Lin</h4><h4><b>Treasury</b></h4>">
 						</div>
 						<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
-							<img class='portrait img-responsive team_portrait' src="portraits/members/nicole.JPG" data-toggle="tooltip" data-placement="bottom" title="<h4>Nicole Chang</h4><h4><b>Speakers</b></h4>">
+							<img class='portrait img-responsive team_portrait' src="portraits/members/sharonk.jpg" data-toggle="tooltip" data-placement="bottom" title="<h4>Sharon Kuo</h4><h4><b>Publicity</b></h4>">
 						</div>
 						<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
-							<img class='portrait img-responsive team_portrait' src="portraits/members/amanda.JPG" data-toggle="tooltip" data-placement="right" title="<h4>Amanda Huang</h4><h4><b>Marketing</b></h4>">
+							<img class='portrait img-responsive team_portrait' src="portraits/members/vanessas.jpg" data-toggle="tooltip" data-placement="right" title="<h4>Vanessa Su</h4><h4><b>Marketing</b></h4>">
 						</div>
 					</div>
 				</div>
@@ -232,62 +218,26 @@
 			</div>
 
 
-			<div class="modal fade speaker_bio_modal" id="teng" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal fade speaker_bio_modal" id="hsieh" tabindex="-1" role="dialog" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-center">
 					<div class="modal-content">
 						<div class="modal-body">
-							<img class='speaker_photo' src='portraits/speakers/teng.JPG'>
-							<h2>Vivian Teng</h2>
-							<h3>Class of 2017</h3>
-							<p>Vivian is a senior at Taipei American School. She lived in California for the first few years of her life before moving to Taiwan. She never actually really enjoyed the arts until her freshman year of high school. Now, as a potential architecture or design student, she finds interests in visual arts. She also enjoys math though unfortunately she is not very talented in that area. She hopes to promote art and design throughout modern society as the fine arts are nowadays often being overlooked as people tend to focus more on STEM now. In her free time, she enjoys playing volleyball, assisting the community through clubs such as World Vision and Athletics Council, and exploring food around Taipei.</p>
+							<img class='speaker_photo' src='portraits/speakers/hsieh.jpg'>
+							<h2>Tingjen Hsieh</h2>
+							<h3>Class of 2020<br/>Speaking with Sisy Chen</h3>
+							<p>Did you know that Sisy and Tingjen are cousins!? They met in middle school while performing at the end of the year BBQ. They enjoy eating together, having late night chats, and performing music of all genres - music runs in the family! The two of them agree with Queen B when she says, “Your self-worth is determined by you. You don’t have to depend on someone telling you who you are.” Tingjen and Sisy have noticed that stereotypes and peer pressure greatly affects the self esteem of teenagers. They believe that although self confidence is often stressed in media, it is crucial for us to not confuse artificial confidence with true confidence. There is more than one way to find your true confidence, and Tingjen and Sisy would like to initiate a shift in our view of morale and guide the community in the direction of finding beauty in their true colors.</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="modal fade speaker_bio_modal" id="feuerhahn" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal fade speaker_bio_modal" id="chen" tabindex="-1" role="dialog" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-center">
 					<div class="modal-content">
 						<div class="modal-body">
-							<img class='speaker_photo' src='portraits/speakers/feuerhahn.JPG'>
-							<h2>Oliver Feuerhahn</h2>
-							<h3>Class of 2018</h3>
-							<p>Oliver Feuerhahn is a junior at Taipei American School. He's attended Taipei American School since the first grade and loved the innovation and creativity that the school immerses students in. In his time at TAS, he has participated in athletics, MUN, NOVA, and more. He stresses the importance of creativity in every student's education. Despite understanding the significance of a traditional education, he hopes every student understands the fact that education in itself should not be governed by tests assessing the same skills when every student is unique in their abilities. Ultimately, he hopes his audience be it students, teachers, or parents, will put greater emphasis on creativity in education, as our society evolves, so should our education. </p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="modal fade speaker_bio_modal" id="uhlman" tabindex="-1" role="dialog" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-center">
-					<div class="modal-content">
-						<div class="modal-body">
-							<img class='speaker_photo' src='portraits/speakers/uhlman.JPG'>
-							<h2>Annabel Uhlman</h2>
-							<h3>Class of 2018<br/>Speaking with Fiona Tsai</h3>
-							<p>Annabel and Fiona are two upperclassmen in Taipei American School. They met in jazz band three years ago and have been enjoying ice cream adventures, music performances, and star war movies together since then. Yoda once said, ‘beware of the dark side’. But too often, people avoid talking about the dark side. Annabel and Fiona think it is time to start an open discussion with the school community on this issue. They will be sharing a first and third person perspective on depression and mental health. Since every case is different, there is no one solution nor is there a list of exact steps to follow. However, they hope that they can reach out to those who are struggling and that we as a community can develop a more accepting mindset. </p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="modal fade speaker_bio_modal" id="tsai" tabindex="-1" role="dialog" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-center">
-					<div class="modal-content">
-						<div class="modal-body">
-							<img class='speaker_photo' src='portraits/speakers/tsai.JPG'>
-							<h2>Fiona Tsai</h2>
-							<h3>Class of 2017<br/>Speaking with Annabel Uhlman</h3>
-							<p>Annabel and Fiona are two upperclassmen in Taipei American School. They met in jazz band three years ago and have been enjoying ice cream adventures, music performances, and star war movies together since then. Yoda once said, ‘beware of the dark side’. But too often, people avoid talking about the dark side. Annabel and Fiona think it is time to start an open discussion with the school community on this issue. They will be sharing a first and third person perspective on depression and mental health. Since every case is different, there is no one solution nor is there a list of exact steps to follow. However, they hope that they can reach out to those who are struggling and that we as a community can develop a more accepting mindset. </p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="modal fade speaker_bio_modal" id="yang" tabindex="-1" role="dialog" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-center">
-					<div class="modal-content">
-						<div class="modal-body">
-							<img class='speaker_photo' src='portraits/speakers/yang.JPG'>
-							<h2>Janice Yang</h2>
-							<h3>Class of 2018<br/>Speaking with Rose Hsu</h3>
-							<p>Janice Yang and Rose Hsu are juniors at Taipei American School, who while are different in many regards, both share a passion for feminism. Janice is an avid MUN-er and has an interest in international relations and psychology, but at the same time pursues intellectual journeys in the math and science realms of academics. Rose loves to be active as a dancer and an athlete and has interests in humanities and biology. Rose is also an innovator - she immerses herself in creative activities, finding out who she is through art and the world around her. Together, they hope to share how their different experiences have led to similar conclusions about what it means to combat society’s oppression, and ultimately empower oneself in whatever one chooses to do. </p>
+							<img class='speaker_photo' src='portraits/speakers/chen.jpg'>
+							<h2>Sisy Chen</h2>
+							<h3>Class of 2019<br/>Speaking with Tingjen Hsieh</h3>
+							<p>Did you know that Sisy and Tingjen are cousins!? They met in middle school while performing at the end of the year BBQ. They enjoy eating together, having late night chats, and performing music of all genres - music runs in the family! The two of them agree with Queen B when she says, “Your self-worth is determined by you. You don’t have to depend on someone telling you who you are.” Tingjen and Sisy have noticed that stereotypes and peer pressure greatly affects the self esteem of teenagers. They believe that although self confidence is often stressed in media, it is crucial for us to not confuse artificial confidence with true confidence. There is more than one way to find your true confidence, and Tingjen and Sisy would like to initiate a shift in our view of morale and guide the community in the direction of finding beauty in their true colors.</p>
 						</div>
 					</div>
 				</div>
@@ -296,67 +246,82 @@
 				<div class="modal-dialog modal-dialog-center">
 					<div class="modal-content">
 						<div class="modal-body">
-							<img class='speaker_photo' src='portraits/speakers/hsu.JPG'>
-							<h2>Rose Hsu</h2>
-							<h3>Class of 2018<br/>Speaking with Janice Yang</h3>
-							<p>Janice Yang and Rose Hsu are juniors at Taipei American School, who while are different in many regards, both share a passion for feminism. Janice is an avid MUN-er and has an interest in international relations and psychology, but at the same time pursues intellectual journeys in the math and science realms of academics. Rose loves to be active as a dancer and an athlete and has interests in humanities and biology. Rose is also an innovator - she immerses herself in creative activities, finding out who she is through art and the world around her. Together, they hope to share how their different experiences have led to similar conclusions about what it means to combat society’s oppression, and ultimately empower oneself in whatever one chooses to do. </p>
+							<img class='speaker_photo' src='portraits/speakers/hsu.jpg'>
+							<h2>Rachel Hsu</h2>
+							<h3>Class of 2018</h3>
+							<p>Rachel Hsu is a junior at Taipei American School who enjoys dance and writing, among other things. Since August, she has been running her website, Graphic Prosetry, where she uploads prose, poetry, and graphic fiction pieces. She accepts topic requests on Facebook for her biweekly academic comic segment, which she hopes will not only help her viewers understand the selected topics but raise awareness and direct positive attention to graphic fiction in academic environments. Her talk will include an informative crash course on comic creation, as well as insight with regard to the significance of visual literature. In turn, she hopes that her teachers and peers will be able to view comics as a medium of both entertainment and legitimate education.</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="modal fade speaker_bio_modal" id="wang" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal fade speaker_bio_modal" id="chang" tabindex="-1" role="dialog" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-center">
 					<div class="modal-content">
 						<div class="modal-body">
-							<img class='speaker_photo' src='portraits/speakers/wang.JPG'>
-							<h2>Jason Wang</h2>
-							<p>Jason Wang is a senior at Taipei American School. He was born in Hong Kong and lived there for a few years before moving to (the less, but still uncomfortably humid) Taipei. Jason is interested in a lot of things and is a very open learner. He loves to talk to people about pretty much anything, and is often interacting with other people. Through his wide interaction with people, he has come to really value the importance of different points of perspectives, something he believes is not emphasized enough in society. He hopes that by sharing his thoughts and experiences, he is able to initiate a shift in this culture towards a broader perspective.</p>
+							<img class='speaker_photo' src='portraits/speakers/chang.jpg'>
+							<h2>Melissa Chang</h2>
+							<h3>Class of 2018</h3>
+							<p>Melissa Chang is a senior at TAS who participates in dance and MUN and is passionate about electrical engineering. Having grown up in Northern California, her childhood was imbued with Silicon Valley legends like Steve Jobs and Bill Gates. As a kid, Melissa played with her dad’s old computers, she took them apart and played with the PCB boards - pretending that they were tiny cities. These little experiences fostered her love for math and science and encouraged her to explore more subjects related to electronics. Melissa then interned at tech startup, Tomofun, where configured and soldered for the RD team.  She’s really excited to share her perspective on optoelectronics — the field that intersects light and electricity - and what it means for the next generation of computers.</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="modal fade speaker_bio_modal" id="boyle" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal fade speaker_bio_modal" id="shah" tabindex="-1" role="dialog" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-center">
 					<div class="modal-content">
 						<div class="modal-body">
-							<img class='speaker_photo' src='portraits/speakers/boyle.JPG'>
-							<h2>Seamus Boyle</h2>
-							<h3>Class of 2017</h3>
-							<p>Seamus Boyle is a senior and a TAS “tiger baby”, currently in his 14th year at the school. A dabbling speaker, athlete, and writer, he enjoys sharing his ideas with as many as are able (or willing) to listen to them. He particularly enjoys finding innovative, subversive ways of addressing previous schools of thought. Often interpreting books, movies, and other media in vastly different ways from his friends and family, he hopes to bring the radical element that has fueled so much discussion in class and in other discussion to his TEDx presentation, hopefully for the benefit of the audience. With his presentation on the mistakes we make, he hopes to help us rethink the values we have been taught since childhood.</p>
+							<img class='speaker_photo' src='portraits/speakers/yang.jpg'>
+							<h2>Dhirpal Shah</h2>
+							<h3>Class of 2020</h3>
+							<p>Dhirpal Shah is a sophomore at Taipei American School. He has been at Taipei American School for only three years, but has lived in Taiwan for the majority of his life. During his three years at TAS, he has been a part of the athletics program, MUN, the dance production, and more. He has experienced stereotypes all around him not only at TAS, but also throughout the course of his childhood in Taiwan. But, he emphasizes that stereotypes should exist, for no one would seem exceptional and unique without these stereotypes. In addition, he recognizes that stereotypes are relevant for a reason - there are in fact seen quite often in the groups of people that the stereotypes are targeted towards. Dhirpal hopes that when people listen to his talk, that they will understand a more realistic view of the world and understand that judgemental ideas will always continue to be a part of culture. However, he hopes that people will learn how to be unique in their own way.</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="modal fade speaker_bio_modal" id="ives" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal fade speaker_bio_modal" id="xu" tabindex="-1" role="dialog" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-center">
 					<div class="modal-content">
 						<div class="modal-body">
-							<img class='speaker_photo' src='portraits/speakers/ives.JPG'>
-							<h2>Anthony Ives</h2>
-							<p>Anthony Ives is an entrepreneurial educator whose mission is to help young people discover their interests, make the most of their talents, and fully realize and embrace who they are and how they can make the world a better place. Born and raised in Iowa, he earned bachelor's and master's degrees in urban planning from MIT. After working in management consulting and for high-tech startups, he realized his calling was to work in education. He has taught entrepreneurship and social entrepreneurship at MIT, Columbia, Cambridge, and in Scotland. He currently teaches AP Psychology, Social Entrepreneurship & Innovation, Entrepreneurship & Venture Creation, and Service Leadership at TAS and coaches MUN, Extemporaneous Speaking, and Baseball. What he loves the most about his job are the opportunities to have conversations with students about life’s great questions: “Who am I and what should I do with my life?” He loves spending time with his wife and two small boys, as well as travels that get him closer to his goal of visiting 100 countries (currently at 72).</p>
+							<img class='speaker_photo' src='portraits/speakers/hsu.jpg'>
+							<h2>Andy Xu</h2>
+							<h3>Class of 2020</h3>
+							<p>Originally from Corning, New York, Andy Xu has had the opportunity of living in two distinctly different places: a small town with just one supermarket to a bustling metropolis full of everyone and everything. Now a sophomore at Taipei American School, Andy is grateful for all the vast opportunities offered, with participation in Cross Country, MUN and Debate, as well as Jazz Band. While humbled by the kind community present at the school, he reflects on his challenge with Tourette’s Syndrome throughout his time in Taiwan and the United States. Through his revealing, and often humorous anecdotes, he hopes to not only spread his message but to also provide the audience with an enjoying time. In the end, he hopes that such message can be a positive and one of perseverance, including the need to accept others regardless of who they are or how they act.</p>
 						</div>
 					</div>
 				</div>
 			</div>
-
-			<div class="modal fade speaker_bio_modal" id="rhoades" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal fade speaker_bio_modal" id="bargiel" tabindex="-1" role="dialog" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-center">
 					<div class="modal-content">
 						<div class="modal-body">
-							<img class='speaker_photo' src='portraits/speakers/rhoades.JPG' >
-							<h2>Dustin Rhoades</h2>
-							<p>Mr. Rhoades has been a teacher, for the past 21 years, in the United States, Indonesia, Malaysia, Egypt, and Taiwan. He first developed an interest in arthropods (especially insects and arachnids) while accompanying fifth graders to Camp Taiwan in 2008. Watching students go from being afraid of "bugs," to appreciating them through brief interactions, made him realize the hunger people have for connecting to the "smaller side" of our natural world. Since purchasing his first macro lens in 2013, he has spent a little time each week photographing arthropods and sharing his shots with friends around the world. Through macro photography, he hopes to increase appreciation for arthropods and raise awareness of their importance to humanity. </p>
+							<img class='speaker_photo' src='portraits/speakers/wang.jpg'>
+							<h2>Carly Bargiel</h2>
+							<h3>Member of the Faculty</h3>
+							<p>Carly Bargiel is a lower school PE teacher who has been working at TAS for five years.  Carly values physical freedom and wellness.  She can been found around campus coaching, laughing, dancing, and creating positive movement experiences for all.<br>Has anyone ever told you to “look on the bright side” or to “see the cup as half full”? Chances are that the person who made these comments is a positive person.  Even if positive thinking does not come naturally to you, there are plenty of ways you can start implementing it to increase your positive to negative ratio.  During this talk we will discover that positivity is like a muscle and you will leave with many exercises to strengthen it.</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="modal fade speaker_bio_modal" id="ross" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal fade speaker_bio_modal" id="walker" tabindex="-1" role="dialog" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-center">
 					<div class="modal-content">
 						<div class="modal-body">
-							<img class='speaker_photo' src='portraits/speakers/ross.JPG' >
-							<h2>Kenn Ross</h2>
-							<p>Kenn Ross is the Managing Director of Asia at Minerva. Originally from the United States, he has lived in Asia for more than 20 years, where he is well-known for his knowledge of higher education issues, education innovation, and China-America cross-border education. In addition to Minerva, Ross is also Founder of the International Foundation for the Promotion of Academic Soft Skills (IFPASS), a US-based nonprofit that provides non-cognitive skills-based and experiential education in China. He regularly speaks at global education events such as TEDx and is also a frequent commenter on Chinese television, where he speaks on topics related to Chinese and international education. Ross’ 2015 book Academic Soft Skills (留学软实力) is considered by many in China as a definitive guide to preparation for global study.</p>
+							<img class='speaker_photo' src='portraits/speakers/boyle.jpg'>
+							<h2>Luke Walker</h2>
+							<h3>Member of the Faculty</h3>
+							<p>Luke Walker teaches students at Taipei American School as a member of the Upper School History and Social Studies Department. He is a self-proclaimed and proud “history nerd”. Luke has an authentic passion for history and strives to instill a similar love for the subject in his students. He believes that history is so much more than a collection of stories, dates, and trivial facts about dead people. He believes that history is a debate about the past—one that challenges us to embrace an essential critical habit of mind when considering our place in the world.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade speaker_bio_modal" id="chiang" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-center">
+					<div class="modal-content">
+						<div class="modal-body">
+							<img class='speaker_photo' src='portraits/speakers/chiang.jpg'>
+							<h2>Vivian Chiang</h2>
+							<h3>Co-founder and co-CEO of Orbit Baby and SpeedSmith</h3>
+							<p>Vivian Chiang is an alumni from Taipei American School. She’s an entrepreneur with a deep technical background and many years of experience building consumer brands. Vivian co-founded Orbit Baby, a premium baby gear company, and sold it to Ergobaby in 2011. While Vivian wore many different hats at Orbit Baby, her primary emphases were in marketing and sales, building the brand and sales organizations from the ground up. Vivian is currently a founder and co-CEO of SpeedSmith, a digital footwear brand. She has a BS and MS in Electrical Engineering from Stanford University, and an MBA from the Stanford Graduate School of Business. A mom of three girls, she enjoys swimming, biking, and running. Through her own journey from Taiwan to the US and back, she shares the importance of embracing and creating discomfort in both her career and family life.</p>
 						</div>
 					</div>
 				</div>
@@ -393,7 +358,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<h3>Ready for an adventure?</h3>
-								<a class="btn btn-default btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLScYuoyagJMjkl6B4tol4LdXHAi1FuXJrpchD-5isqVdKFw1Lg/viewform">Register →</a>
+								<a class="btn btn-default btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSdu00fG97xhMoO04nnp0RyG8fv_n41TkTNx9_TqN7FtMBHZDw/viewform">Register →</a>
 							</div>
 						</div>
 				</div>
@@ -408,21 +373,23 @@
 		<script src="typed.js"></script>
 		<script>
 			$(window).load(function(){
-				window.startTime = new Date().getTime();
-				window.timeConstant = Math.random() * 2000 + 1000;
-				window.intervalTimer = setTimeout(load, Math.random() * 200 + 100);
-				if(window.location.href.substring(0, 4) !== "http"){
-					$('#skip').show(); // shows skip button if not being loaded over http/https
-				}
+				setInterval(groupUpdating, 10);
 				if(window.matchMedia("(min-width: 767px)").matches){
 					$('[data-toggle="tooltip"]').tooltip({html: true});
 				}
+				change();
+				// dynamicUpdateLength($('#marketing-name'));
+				// dynamicUpdateLength($('#marketing-text'));
+				// $('#marketing-name').keyup(function(){dynamicUpdateLength(this)});
+				// $('#marketing-text').keyup(function(){dynamicUpdateLength(this)});
     	});
+
 
 			$(window).bind('scroll', function() {
 				let scrollIndex = $(window).scrollTop() + $(window).height() / 2;
          if ($(window).scrollTop() > $('#date').offset().top) { // for animation to show longer until is entirely out of sight
              $('#navigation').addClass('fixed');
+						 $('#navigation').addClass('white-bg');
 						 if(scrollIndex >= $('#whatistedx').offset().top){
 							 $('#marketing-text').addClass('stopped');
  								$('#speakers-link').remove('active');
@@ -445,31 +412,43 @@
 	         else {
 						 $('#marketing-text').removeClass('stopped');
 						 $('#navigation').removeClass('fixed');
+						 $('#navigation').removeClass('white-bg');
 						 $('#navigation a').removeClass('active');
 	         }
     });
-
-			function load(){
-				let percentage = (new Date().getTime() - window.startTime) / window.timeConstant * 100;
-				if(percentage > 100){
-					change();
-				}
-				else {
-					$('#percentage-loaded').html(Math.round(percentage) + '%');
-					$('#rethinking-pct').attr('style', 'opacity: ' + (percentage / 100 / 2 + 0.5));
-					window.intervalTimer = setTimeout(load, Math.random() * 400 + 100)
-				}
+			function groupUpdating(){
+				dynamicUpdateLength($('#marketing-name'));
+				dynamicUpdateLength($('#marketing-text'));
 			}
+			function dynamicUpdateLength(formal){
+					if($(formal).val() === "") {
+						$(formal).attr({
+							width: 'auto', 
+							size: ($(formal).attr('placeholder').length === 0 ? 1 : $(formal).attr('placeholder').length),
+						});
+					}
+					else {
+						$(formal).attr({
+							width: 'auto', 
+							size: $(formal).val().length,
+						});
+					}
+			}
+
+		
 			function change(){
-				clearTimeout(window.intervalTimer);
-				$('#theme').hide();
-				$('#everything-else').fadeIn();
-				hasChanged = true;
-				$("#marketing-text").typed({
-					strings: ["education.", "feminism.", "depression.", "perspective.", "success.", "happiness.", "architecture.", "higher education.", "anthropods."],
-					typeSpeed: 80,
-					loop: true
+				$("#marketing-name").typed({
+					strings: ["Rachel Hsu", "Melissa Chang", "Tingjen / Sisy", "Dhirpal Shah", "Andy Xu", "Carly Bargiel", "Luke Walker", "Vivian Chiang", "full name"],
+					typeSpeed: 18,
+					attr: 'placeholder'
 				});
+				$("#marketing-text").typed({
+					strings: ["comics", "optoelectronics", "word power", "stereotypes", "Tourette's", "positivity", "history", "discomfort", "your title here"],
+					typeSpeed: 30,
+					attr: 'placeholder'
+				});
+				$('#marketing-name').focus()
+
 			}
 		</script>
 	</body>

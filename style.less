@@ -1,7 +1,7 @@
 // out: styles.css, sourcemap: true, compress: true
 
 @TED_YELLOW: #ffe66f;
-@TED_PINK: #fc8371;
+@TED_PINK: #DC575F;
 @TED_BLUE: #a3e8e6;
 @TED_RED: #FF2B06;
 @TED_RED_DARK: #DF2707;
@@ -26,6 +26,9 @@ body {
 .fixed {
 	position: fixed;
 }
+.logo {
+	text-align: center; 
+}
 #navigation.fixed {
 	width: 100%;
 	top: 0;
@@ -35,6 +38,10 @@ body {
 .jumbotron {
 	margin-bottom:0px;
 }
+.img-bg {
+	background: url('background.jpg') no-repeat center;
+	background-size: cover;
+}
 .white-bg {
 	background: white;
 }
@@ -43,7 +50,6 @@ body {
 }
 #marketing-heading {
 	margin-top: 0;
-	color: @TED_RED;
 }
 .promo-img {
 	padding: 25px;
@@ -54,6 +60,14 @@ body {
 }
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary:active:focus {
 	background: lighten(@TED_RED, 15%) !important;
+}
+.btn-secondary {
+	background: @TED_PINK;
+	border: none;
+}
+.btn-secondary:hover, .btn-secondary:active, .btn-secondary:focus, .btn-secondary:active:focus {
+	background: lighten(@TED_PINK, 15%) !important;
+	color: white;
 }
 .btn-default {
 	background: white;
@@ -68,15 +82,51 @@ body {
 	font-size: 30px;
 }
 #marketing-text-container {
-	color: @TED_RED;
-	margin-top: 0
+	font-size: @HEADER_SIZE * 0.8;
+	color: @TED_PINK;
+	// font-family: 'Montserrat';
+	margin-top: 0;
+	.marketing-text {
+		// text-decoration: underline @TED_PINK;
+		border: none;
+		border-bottom: 2px solid @TED_PINK;
+		// font-family: 'Patrick Hand';
+		color: #303030;
+		display: inline-table;
+		::placeholder {
+			color: #d0d0d0;
+		}
+	}
+}
+#marketing-text {
+	// text-align: center;
 }
 #marketing-text.stopped {
 	display: none;
 }
-#centered-marketing {
-	margin-top: 150px;
-	margin-bottom: 150px;
+#marketing-head {
+		margin-top: 150px;
+		margin-bottom: 150px;
+		p {
+			color: #303030;
+		}
+}
+#ticket {
+	border-radius: 35px;
+	border: 2px solid @TED_PINK;
+	padding: 25px;
+	text-align: left;
+	display: inline-block;
+	background: #fff;
+}
+@media (max-width: 1050px) {
+	#ticket {
+		text-align: center;
+		margin: 30px;
+	}
+	#marketing-head {
+		margin: 0;
+	}
 }
 #skip {
 	display: none;
